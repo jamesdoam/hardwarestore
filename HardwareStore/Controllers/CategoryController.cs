@@ -30,8 +30,10 @@ namespace HardwareStoreWeb.Controllers
             {
                 _db.Categories.Add(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index");
             }
+            TempData["error"] = "Category name cannot be empty";
             return View(obj);
         }
 
@@ -61,6 +63,7 @@ namespace HardwareStoreWeb.Controllers
                 //_db.Categories.Add(obj);
                 _db.Categories.Update(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Category edited successfully";
                 return RedirectToAction("Index");
             }
 
@@ -97,6 +100,7 @@ namespace HardwareStoreWeb.Controllers
 
             _db.Categories.Remove(obj);                
             _db.SaveChanges();
+            TempData["success"] = "Category deleted successfully";
             return RedirectToAction("Index");
         }
     }
