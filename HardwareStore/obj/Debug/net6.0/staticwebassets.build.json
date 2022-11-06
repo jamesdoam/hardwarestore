@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jkhWZUpCWst6QdA0fOxkdDfyR+0hU+S/kT9WeSvP38o=",
+  "Hash": "GsX2vBhKlyJCLJjj8Ce2CbFNdz52GRfb4PuboUkEv70=",
   "Source": "HardwareStoreWeb",
   "BasePath": "_content/HardwareStoreWeb",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Thanh\\Documents\\dotnet\\HardwareStore\\HardwareStore\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\HardwareStoreWeb.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Thanh\\Documents\\dotnet\\HardwareStore\\HardwareStore\\wwwroot\\css\\bootswatchTheme.css",
+      "SourceId": "HardwareStoreWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Thanh\\Documents\\dotnet\\HardwareStore\\HardwareStore\\wwwroot\\",
+      "BasePath": "_content/HardwareStoreWeb",
+      "RelativePath": "css/bootswatchTheme.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootswatchTheme.css"
     },
     {
       "Identity": "C:\\Users\\Thanh\\Documents\\dotnet\\HardwareStore\\HardwareStore\\wwwroot\\css\\site.css",
