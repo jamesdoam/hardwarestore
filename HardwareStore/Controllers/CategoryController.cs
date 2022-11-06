@@ -42,14 +42,14 @@ namespace HardwareStoreWeb.Controllers
                 return NotFound();
             }
 
-            var category = _db.Categories.FirstOrDefault(c => c.Id == id);
+            var categoryObj = _db.Categories.FirstOrDefault(c => c.Id == id);
 
-            if (category == null)
+            if (categoryObj == null)
             {
                 return NotFound(); 
             }
 
-            return View(category);
+            return View(categoryObj);
 
         }
         [HttpPost]
@@ -58,7 +58,7 @@ namespace HardwareStoreWeb.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.Categories.Add(obj);
+                //_db.Categories.Add(obj);
                 _db.Categories.Update(obj);
                 _db.SaveChanges();
                 return RedirectToAction("Index");
@@ -66,9 +66,38 @@ namespace HardwareStoreWeb.Controllers
 
             return View(obj);
         }
-        
 
-        
+        public IActionResult Delete(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
 
+            var categoryObj = _db.Categories.FirstOrDefault(c => c.Id == id);
+
+            if (categoryObj == null)
+            {
+                return NotFound();
+            }
+
+            return View(categoryObj);
+
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeletePOST(int? id)
+        {
+            var obj = _db.Categories.Find(id);
+            if (obj == null)
+            {
+                return NotFound();
+            }
+
+            _db.Categories.Remove(obj);                
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
