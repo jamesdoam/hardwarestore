@@ -1,0 +1,33 @@
+﻿@model IEnumerable<HardwareStoreWeb.Models.Category>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Category Name
+            </th>
+            <th>
+                Created Date&Time
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model)
+        {
+            <tr>
+                <td width="50%">
+                    @obj.Name
+                </td>
+                <td width="30%">
+                    @obj.CreatedDateTime
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
