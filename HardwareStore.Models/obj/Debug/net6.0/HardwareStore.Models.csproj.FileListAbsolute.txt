@@ -1,0 +1,12 @@
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.Models\bin\Debug\net6.0\HardwareStore.Models.deps.json
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.Models\bin\Debug\net6.0\HardwareStore.Models.dll
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.Models\bin\Debug\net6.0\HardwareStore.Models.pdb
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.Models\obj\Debug\net6.0\HardwareStore.Models.csproj.AssemblyReference.cache
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.Models\obj\Debug\net6.0\HardwareStore.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.Models\obj\Debug\net6.0\HardwareStore.Models.AssemblyInfoInputs.cache
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.Models\obj\Debug\net6.0\HardwareStore.Models.AssemblyInfo.cs
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.Models\obj\Debug\net6.0\HardwareStore.Models.csproj.CoreCompileInputs.cache
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.Models\obj\Debug\net6.0\HardwareStore.Models.dll
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.Models\obj\Debug\net6.0\refint\HardwareStore.Models.dll
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.Models\obj\Debug\net6.0\HardwareStore.Models.pdb
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.Models\obj\Debug\net6.0\ref\HardwareStore.Models.dll

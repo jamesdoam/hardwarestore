@@ -1,0 +1,17 @@
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.DataAccess\obj\Debug\net6.0\HardwareStore.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.DataAccess\obj\Debug\net6.0\HardwareStore.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.DataAccess\obj\Debug\net6.0\HardwareStore.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.DataAccess\obj\Debug\net6.0\HardwareStore.DataAccess.AssemblyInfo.cs
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.DataAccess\obj\Debug\net6.0\HardwareStore.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.DataAccess\bin\Debug\net6.0\HardwareStore.DataAccess.deps.json
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.DataAccess\bin\Debug\net6.0\HardwareStore.DataAccess.runtimeconfig.json
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.DataAccess\bin\Debug\net6.0\HardwareStore.DataAccess.dll
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.DataAccess\bin\Debug\net6.0\HardwareStore.DataAccess.pdb
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.DataAccess\bin\Debug\net6.0\HardwareStore.Models.dll
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.DataAccess\bin\Debug\net6.0\HardwareStore.Models.pdb
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.DataAccess\obj\Debug\net6.0\HardwareStore.DataAccess.csproj.CopyComplete
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.DataAccess\obj\Debug\net6.0\HardwareStore.DataAccess.dll
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.DataAccess\obj\Debug\net6.0\refint\HardwareStore.DataAccess.dll
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.DataAccess\obj\Debug\net6.0\HardwareStore.DataAccess.pdb
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.DataAccess\obj\Debug\net6.0\HardwareStore.DataAccess.genruntimeconfig.cache
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore.DataAccess\obj\Debug\net6.0\ref\HardwareStore.DataAccess.dll

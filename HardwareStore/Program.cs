@@ -1,4 +1,4 @@
-using HardwareStoreWeb.Data;
+using HardwareStore.DataAccess;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

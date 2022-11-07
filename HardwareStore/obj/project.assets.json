@@ -3464,6 +3464,32 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "HardwareStore.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "HardwareStore.Models": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.10",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10"
+        },
+        "compile": {
+          "bin/placeholder/HardwareStore.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HardwareStore.DataAccess.dll": {}
+        }
+      },
+      "HardwareStore.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/HardwareStore.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HardwareStore.Models.dll": {}
+        }
       }
     }
   },
@@ -9839,10 +9865,22 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "HardwareStore.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../HardwareStore.DataAccess/HardwareStore.DataAccess.csproj",
+      "msbuildProject": "../HardwareStore.DataAccess/HardwareStore.DataAccess.csproj"
+    },
+    "HardwareStore.Models/1.0.0": {
+      "type": "project",
+      "path": "../HardwareStore.Models/HardwareStore.Models.csproj",
+      "msbuildProject": "../HardwareStore.Models/HardwareStore.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "HardwareStore.DataAccess >= 1.0.0",
+      "HardwareStore.Models >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.10",
@@ -9875,7 +9913,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Thanh\\Documents\\dotnet\\HardwareStore\\HardwareStore.DataAccess\\HardwareStore.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\Thanh\\Documents\\dotnet\\HardwareStore\\HardwareStore.DataAccess\\HardwareStore.DataAccess.csproj"
+            },
+            "C:\\Users\\Thanh\\Documents\\dotnet\\HardwareStore\\HardwareStore.Models\\HardwareStore.Models.csproj": {
+              "projectPath": "C:\\Users\\Thanh\\Documents\\dotnet\\HardwareStore\\HardwareStore.Models\\HardwareStore.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
