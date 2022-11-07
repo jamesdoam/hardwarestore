@@ -14,5 +14,6 @@ namespace HardwareStore.Models
         [Required]
         [Display(Name = "Product Finish")]
         public string Name { get; set; }
+        public DateTime CreatedDateTime { get; set; } = DateTime.Now;
     }
 }
