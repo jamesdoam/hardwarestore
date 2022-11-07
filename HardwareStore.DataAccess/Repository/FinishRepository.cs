@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace HardwareStore.DataAccess.Repository
 {
-    public class CategoryRepository : Repository<Category>, ICategoryRepository
+    public class FinishRepository : Repository<Finish>, IFinishRepository
     {
         private ApplicationDbContext _db;
-        public CategoryRepository(ApplicationDbContext db) : base(db)
+        public FinishRepository(ApplicationDbContext db) : base(db)
         {
             _db = db;
         }
 
-        public void Update(Category obj)
+        public void Update(Finish obj)
         {
-            _db.Categories.Update(obj);
+            _db.Finishes.Update(obj);
         }
     }
 }
