@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace HardwareStore.Models;
-
+namespace HardwareStore.Models
+{
     public class Category
     {
         [Key]
@@ -12,4 +12,6 @@ namespace HardwareStore.Models;
         public string Name { get; set; }
         public DateTime CreatedDateTime { get; set; } = DateTime.Now;
     }
+}
+
 

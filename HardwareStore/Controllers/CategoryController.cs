@@ -4,7 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace HardwareStoreWeb.Controllers;
+namespace HardwareStoreWeb.Controllers
+{
+
+
 
     public class CategoryController : Controller
     {
@@ -106,4 +109,5 @@ namespace HardwareStoreWeb.Controllers;
             return RedirectToAction("Index");
         }
     }
+}
 
