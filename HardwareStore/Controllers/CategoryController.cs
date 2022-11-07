@@ -1,4 +1,5 @@
 ﻿using HardwareStore.DataAccess;
+using HardwareStore.DataAccess.Repository.IRepository;
 using HardwareStore.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -6,20 +7,17 @@ using System.Linq;
 
 namespace HardwareStoreWeb.Controllers
 {
-
-
-
     public class CategoryController : Controller
     {
-        private readonly ApplicationDbContext _db;
+        private readonly ICategoryRepository _db;
 
-        public CategoryController(ApplicationDbContext db)
+        public CategoryController(ICategoryRepository db)
         {
             _db = db;
         }
         public IActionResult Index()
         {
-            IEnumerable<Category> categoryList = _db.Categories;
+            IEnumerable<Category> categoryList = _db.GetAll(); //this method is from the Generic Repository
             return View(categoryList);
         }
 
@@ -33,8 +31,8 @@ namespace HardwareStoreWeb.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.Categories.Add(obj);
-                _db.SaveChanges();
+                _db.Add(obj); //again, this method is from the Generic Repository
+                _db.Save();
                 TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index");
             }
@@ -49,7 +47,7 @@ namespace HardwareStoreWeb.Controllers
                 return NotFound();
             }
 
-            var categoryObj = _db.Categories.FirstOrDefault(c => c.Id == id);
+            var categoryObj = _db.GetFirstOrDefault(c => c.Id == id);
 
             if (categoryObj == null)
             {
@@ -66,8 +64,8 @@ namespace HardwareStoreWeb.Controllers
             if (ModelState.IsValid)
             {
                 //_db.Categories.Add(obj);
-                _db.Categories.Update(obj);
-                _db.SaveChanges();
+                _db.Update(obj);
+                _db.Save();
                 TempData["success"] = "Category edited successfully";
                 return RedirectToAction("Index");
             }
@@ -82,7 +80,7 @@ namespace HardwareStoreWeb.Controllers
                 return NotFound();
             }
 
-            var categoryObj = _db.Categories.FirstOrDefault(c => c.Id == id);
+            var categoryObj = _db.GetFirstOrDefault(c => c.Id == id);
 
             if (categoryObj == null)
             {
@@ -97,14 +95,14 @@ namespace HardwareStoreWeb.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeletePOST(int? id)
         {
-            var obj = _db.Categories.Find(id);
+            var obj = _db.GetFirstOrDefault(u => u.Id == id);
             if (obj == null)
             {
                 return NotFound();
             }
 
-            _db.Categories.Remove(obj);                
-            _db.SaveChanges();
+            _db.Remove(obj);                
+            _db.Save();
             TempData["success"] = "Category deleted successfully";
             return RedirectToAction("Index");
         }
