@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HardwareStore.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace HardwareStore.DataAccess.Repository.IRepository
 {
-    public interface IUnitOfWork
+    public interface ICategoryRepository : IRepository<Category>
     {
-        ICategoryRepository Category { get; }
-        IFinishRepository Finish { get; }
-        void Save();
+        void Update(Category obj);
     }
 }
