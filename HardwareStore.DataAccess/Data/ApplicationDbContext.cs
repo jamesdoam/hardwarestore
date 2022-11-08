@@ -12,6 +12,7 @@ namespace HardwareStore.DataAccess
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Finish> Finishes { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }
 
