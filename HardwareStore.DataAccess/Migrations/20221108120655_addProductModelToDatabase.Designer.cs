@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HardwareStoreWeb.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221108105243_addProductModelToDatabase")]
+    [Migration("20221108120655_addProductModelToDatabase")]
     partial class addProductModelToDatabase
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
