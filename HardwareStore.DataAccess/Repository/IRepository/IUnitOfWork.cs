@@ -10,6 +10,7 @@ namespace HardwareStore.DataAccess.Repository.IRepository
     {
         ICategoryRepository Category { get; }
         IFinishRepository Finish { get; }
+        IProductRepository Product { get; }
         void Save();
     }
 }

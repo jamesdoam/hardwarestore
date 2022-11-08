@@ -16,10 +16,12 @@ namespace HardwareStore.DataAccess.Repository
             _db = db;
             Category = new CategoryRepository(_db);
             Finish = new FinishRepository(_db);
+            Product = new ProductRepository(_db);
         }
     
         public ICategoryRepository Category {get;private set;}
         public IFinishRepository Finish { get; private set; }
+        public IProductRepository Product { get; private set; }
 
         public void Save()
         {
