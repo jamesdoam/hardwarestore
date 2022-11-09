@@ -13,14 +13,12 @@ namespace HardwareStore.Models
         public string Name { get; set; }        
         [Required]
         [DisplayName("Product Price")]
-        public double Price { get; set; }        
-
-
+        public double Price { get; set; }    
         [DisplayName("Sale Price")]
-        public double SalePrice {get; set; }
-        public string Description { get; set; }
-        public string Sku { get; set; }
-        public string ImageUrl { get; set; }
+        public double? SalePrice {get; set; }
+        public string? Description { get; set; }
+        public string? Sku { get; set; }
+        public string? ImageUrl { get; set; }
         [Required]
         public int CategoryId { get; set; }
         [ForeignKey("CategoryId")]

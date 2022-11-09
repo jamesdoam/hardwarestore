@@ -266,3 +266,8 @@ C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore\bin\Debug\net6.0\Har
 C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore\bin\Debug\net6.0\HardwareStore.Models.dll
 C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore\bin\Debug\net6.0\HardwareStore.DataAccess.pdb
 C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore\bin\Debug\net6.0\HardwareStore.Models.pdb
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\Thanh\Documents\dotnet\HardwareStore\HardwareStore\obj\Debug\net6.0\HardwareStoreWeb.MvcApplicationPartsAssemblyInfo.cs

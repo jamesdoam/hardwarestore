@@ -1,7 +1,9 @@
 ﻿using HardwareStore.DataAccess;
 using HardwareStore.DataAccess.Repository.IRepository;
 using HardwareStore.Models;
+using HardwareStore.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -24,17 +26,31 @@ namespace HardwareStoreWeb.Areas.Admin.Controllers
 
         public IActionResult Upsert(int? id)
         {
-            Product product = new();
-            if (id == null || id == 0)
+            ProductVM productVM = new()
             {
-                return View(product); //if no id, create product
+                Product = new(),
+                CategoryList = _unitOfWork.Category.GetAll().Select(i => new SelectListItem
+                {
+                    Text = i.Name,
+                    Value = i.Id.ToString()
+                }),
+                FinishList = _unitOfWork.Finish.GetAll().Select(i => new SelectListItem
+                {
+                    Text = i.Name,
+                    Value = i.Id.ToString()
+                })
+            };
+            
+            if (id == null || id == 0)
+            {                
+                return View(productVM); //if no id, create product
             }
             else
             {
                 // update product
             }
 
-            return View(product);
+            return View(productVM);
 
         }
         [HttpPost]
@@ -48,6 +64,10 @@ namespace HardwareStoreWeb.Areas.Admin.Controllers
                 _unitOfWork.Save();
                 TempData["success"] = "Product edited successfully";
                 return RedirectToAction("Index");
+            }
+            else
+            {
+                TempData["error"] = "Something wrong";
             }
 
             return View(obj);
