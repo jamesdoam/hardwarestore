@@ -1,9 +1,10 @@
 ﻿@model HardwareStore.Models.ViewModels.ProductVM
 
-<form method="post" asp-action="Upsert">
-	<div class="border p-3 mt-4">
+<form method="post" asp-action="Upsert" enctype="multipart/form-data">
+	<div class="border p-3 mt-4 row">
 		<div class="row pb-2">
-			<h2 class="text-primary">Edit Product</h2>
+			@*if product id NOT ZERO, update product, else create product*@
+			<h2 class="text-primary">@(Model.Product.Id !=0?"Update":"Create") Product</h2> 
 			<hr />
 		</div>
 		@*<div asp-validation-summary="All"></div>*@
@@ -17,27 +18,27 @@
 			<textarea asp-for="Product.Description" rows="3" class="form-control"></textarea>
 			<span asp-validation-for="Product.Description" class="text-danger"></span>
 		</div>
-		<div class="mb-3">
+		<div class="mb-3 col-6">
 			<label asp-for="Product.Price"></label>
 			<input asp-for="Product.Price" class="form-control" />
 			<span asp-validation-for="Product.Price" class="text-danger"></span>
 		</div>
-		<div class="mb-3">
+		<div class="mb-3 col-6">
 			<label asp-for="Product.SalePrice"></label>
 			<input asp-for="Product.SalePrice" class="form-control" />
 			<span asp-validation-for="Product.SalePrice" class="text-danger"></span>
 		</div>
-		<div class="mb-3">
+		<div class="mb-3 col-6">
 			<label asp-for="Product.Sku"></label>
 			<input asp-for="Product.Sku" class="form-control" />
 			<span asp-validation-for="Product.Sku" class="text-danger"></span>
 		</div>
-		<div class="mb-3">
+		<div class="mb-3 col-6">
 			<label asp-for="Product.ImageUrl"></label>
-			<input asp-for="Product.ImageUrl" class="form-control" />
+			<input type = "file" id = "uploadBox" name="file" class="form-control" />
 			<span asp-validation-for="Product.ImageUrl" class="text-danger"></span>
 		</div>
-		<div class="mb-3">
+		<div class="mb-3 col-6">
 			<label asp-for="Product.CategoryId"></label>
 			<select asp-for="Product.CategoryId" asp-items="@Model.CategoryList" class="form-select">
 				<option disabled selected>-- Select Category --</option>
@@ -45,7 +46,7 @@
 			<span asp-validation-for="Product.CategoryId" class="text-danger"></span>
 		</div>
 
-		<div class="mb-3">
+		<div class="mb-3 col-6">
 			<label asp-for="Product.FinishId"></label>
 			<select asp-for="Product.FinishId" asp-items="@Model.FinishList" class="form-select">
 				<option disabled selected>-- Select Finish --</option>
@@ -53,7 +54,8 @@
 			<span asp-validation-for="Product.FinishId" class="text-danger"></span>
 		</div>
 			
-		<button type="submit" class="btn btn-primary" style="width:150px">Update</button>
+		<button type="submit" class="btn btn-primary" style="width:150px">@(Model.Product.Id != 0?"Update":"Create")</button>
+		&nbsp;
 		<a asp-controller="Product" asp-action="Upsert" class="btn btn-secondary" style="width:150px">
 			Back to List
 		</a>
