@@ -1,4 +1,5 @@
 ﻿using HardwareStore.DataAccess;
+using HardwareStore.DataAccess.Repository;
 using HardwareStore.DataAccess.Repository.IRepository;
 using HardwareStore.Models;
 using HardwareStore.Models.ViewModels;
@@ -22,8 +23,7 @@ namespace HardwareStoreWeb.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            IEnumerable<Product> productList = _unitOfWork.Product.GetAll(); //this method is from the Generic Repository
-            return View(productList);
+            return View();
         }
 
         public IActionResult Upsert(int? id)
@@ -120,6 +120,15 @@ namespace HardwareStoreWeb.Areas.Admin.Controllers
             TempData["success"] = "Product deleted successfully";
             return RedirectToAction("Index");
         }
+
+        #region API CALLS
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var productList = _unitOfWork.Product.GetAll();
+            return Json(new { data = productList });
+        }
+        #endregion
     }
 }
 
