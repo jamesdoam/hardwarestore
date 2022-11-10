@@ -50,10 +50,10 @@ namespace HardwareStoreWeb.Areas.Admin.Controllers
             else
             {
                 // update product
+                productVM.Product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == id);
+                return View(productVM);
             }
-
-            return View(productVM);
-
+    
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -70,6 +70,15 @@ namespace HardwareStoreWeb.Areas.Admin.Controllers
                     var uploads = Path.Combine(wwwRootPath,@"images\products");
                     var extension = Path.GetExtension(file.FileName);
 
+                    if (obj.Product.ImageUrl != null)
+                    {
+                        var oldImagePath = Path.Combine(wwwRootPath, obj.Product.ImageUrl.TrimStart('\\'));
+                        if (System.IO.File.Exists(oldImagePath))
+                        {
+                            System.IO.File.Delete(oldImagePath);
+                        }
+                    }
+
                     using (var fileStream = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
                     {
                         file.CopyTo(fileStream);
@@ -78,9 +87,18 @@ namespace HardwareStoreWeb.Areas.Admin.Controllers
                     obj.Product.ImageUrl = @"\images\products\" + fileName + extension;
                 }
 
-                _unitOfWork.Product.Add(obj.Product);
-                _unitOfWork.Save();
-                TempData["success"] = "Product created successfully";
+                if(obj.Product.Id != 0)
+                {
+                    _unitOfWork.Product.Update(obj.Product);
+                    TempData["success"] = "Product updated successfully";
+                }
+                else
+                {
+                    _unitOfWork.Product.Add(obj.Product);
+                    TempData["success"] = "Product created successfully";
+                }
+
+                _unitOfWork.Save();                
                 return RedirectToAction("Index");
             }
 
@@ -125,7 +143,7 @@ namespace HardwareStoreWeb.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var productList = _unitOfWork.Product.GetAll();
+            var productList = _unitOfWork.Product.GetAll(includeProperties:"Category,Finish");
             return Json(new { data = productList });
         }
         #endregion

@@ -10,26 +10,30 @@ namespace HardwareStore.Models
         [Key]
         public int Id { get; set; }
         [Required]
-        [DisplayName("Product Name")]
+        [Display(Name = "Title")]
         public string Name { get; set; }        
         [Required]
-        [DisplayName("Product Price")]
+        [DisplayName("Regular Price")]
         public double Price { get; set; }    
         [DisplayName("Sale Price")]
         public double? SalePrice {get; set; }
         public string? Description { get; set; }
+        [DisplayName("SKU")]
         public string? Sku { get; set; }
         [ValidateNever]
         public string? ImageUrl { get; set; }
         [Required]
+        [DisplayName("Category")]
         public int CategoryId { get; set; }
         [ForeignKey("CategoryId")]
         [ValidateNever]
         public Category Category { get; set; }
         [Required]
+        [DisplayName("Finish")]
         public int FinishId { get; set; }
         [ValidateNever]
         public Finish Finish { get; set; }
+        
         public DateTime CreatedDateTime { get; set; } = DateTime.Now;
     }
 }

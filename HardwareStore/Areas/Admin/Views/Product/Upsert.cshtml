@@ -1,6 +1,8 @@
 ﻿@model HardwareStore.Models.ViewModels.ProductVM
 
 <form method="post" asp-action="Upsert" enctype="multipart/form-data">
+	<input asp-for="Product.Id" hidden /> @*need this line to pass Product Id back to controller*@
+	<input asp-for="Product.ImageUrl" hidden /> @*need this line to pass Product Id back to controller*@
 	<div class="border p-3 mt-4 row">
 		<div class="row pb-2">
 			@*if product id NOT ZERO, update product, else create product*@
@@ -56,7 +58,7 @@
 			
 		<button type="submit" class="btn btn-primary" style="width:150px">@(Model.Product.Id != 0?"Update":"Create")</button>
 		&nbsp;
-		<a asp-controller="Product" asp-action="Upsert" class="btn btn-secondary" style="width:150px">
+		<a asp-controller="Product" asp-action="Index" class="btn btn-secondary" style="width:150px">
 			Back to List
 		</a>
 	</div>
