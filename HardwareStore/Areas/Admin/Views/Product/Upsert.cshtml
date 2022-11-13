@@ -55,17 +55,46 @@
 			</select>
 			<span asp-validation-for="Product.FinishId" class="text-danger"></span>
 		</div>
-			
-		<button type="submit" class="btn btn-primary" style="width:150px">@(Model.Product.Id != 0?"Update":"Create")</button>
-		&nbsp;
-		<a asp-controller="Product" asp-action="Index" class="btn btn-secondary" style="width:150px">
-			Back to List
-		</a>
+
+		<div class="col-12">
+			@if(Model.Product.Id != 0)
+			{
+				<button type="submit" class="btn btn-primary" style="width:150px">Update</button>
+			}
+			else
+			{
+				<button type="submit" onclick="return ValidateInput()" class="btn btn-primary" style="width:150px">Create</button>
+			}
+
+			&nbsp;
+			<a asp-controller="Product" asp-action="Index" class="btn btn-secondary" style="width:150px">
+				Back to List
+			</a>
+		</div>
+
+
+		<div class="col-2 pt-4">
+			<img src="@Model.Product.ImageUrl"
+				 width="100%" style="border-radius:5px; border:1px solid #bbb9b9" />
+		</div>
 	</div>
 </form>
 
 @section Scripts{
 	@{
-		<partial name="_ValidationScriptsPartial" />
+	<partial name="_ValidationScriptsPartial" />
 	}
 }
+
+<script>
+	function ValidateInput(){
+		if(document.getElementById("uploadBox").value==""){
+			Swal.fire({
+			  icon: 'error',
+			  title: 'Oops...',
+			  text: 'Please upload an Image!',
+			});
+			return false;
+		}
+		return true;
+</script>

@@ -41,8 +41,7 @@ namespace HardwareStoreWeb.Areas.Admin.Controllers
                     Text = i.Name,
                     Value = i.Id.ToString()
                 })
-            };
-            
+            };            
             if (id == null || id == 0)
             {                
                 return View(productVM); //if no id, create product
@@ -52,9 +51,9 @@ namespace HardwareStoreWeb.Areas.Admin.Controllers
                 // update product
                 productVM.Product = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == id);
                 return View(productVM);
-            }
-    
+            }    
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Upsert(ProductVM obj,IFormFile? file)
@@ -69,7 +68,6 @@ namespace HardwareStoreWeb.Areas.Admin.Controllers
                     string fileName = Guid.NewGuid().ToString();
                     var uploads = Path.Combine(wwwRootPath,@"images\products");
                     var extension = Path.GetExtension(file.FileName);
-
                     if (obj.Product.ImageUrl != null)
                     {
                         var oldImagePath = Path.Combine(wwwRootPath, obj.Product.ImageUrl.TrimStart('\\'));
@@ -78,15 +76,12 @@ namespace HardwareStoreWeb.Areas.Admin.Controllers
                             System.IO.File.Delete(oldImagePath);
                         }
                     }
-
                     using (var fileStream = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
                     {
                         file.CopyTo(fileStream);
                     }
-
                     obj.Product.ImageUrl = @"\images\products\" + fileName + extension;
                 }
-
                 if(obj.Product.Id != 0)
                 {
                     _unitOfWork.Product.Update(obj.Product);
@@ -97,46 +92,11 @@ namespace HardwareStoreWeb.Areas.Admin.Controllers
                     _unitOfWork.Product.Add(obj.Product);
                     TempData["success"] = "Product created successfully";
                 }
-
                 _unitOfWork.Save();                
                 return RedirectToAction("Index");
             }
 
             return View(obj);
-        }
-
-        public IActionResult Delete(int? id)
-        {
-            if (id == null || id == 0)
-            {
-                return NotFound();
-            }
-
-            var productObj = _unitOfWork.Product.GetFirstOrDefault(c => c.Id == id);
-
-            if (productObj == null)
-            {
-                return NotFound();
-            }
-
-            return View(productObj);
-
-        }
-
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public IActionResult DeletePOST(int? id)
-        {
-            var obj = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == id);
-            if (obj == null)
-            {
-                return NotFound();
-            }
-
-            _unitOfWork.Product.Remove(obj);
-            _unitOfWork.Save();
-            TempData["success"] = "Product deleted successfully";
-            return RedirectToAction("Index");
         }
 
         #region API CALLS
@@ -145,6 +105,28 @@ namespace HardwareStoreWeb.Areas.Admin.Controllers
         {
             var productList = _unitOfWork.Product.GetAll(includeProperties:"Category,Finish");
             return Json(new { data = productList });
+        }
+
+        //POST
+        [HttpDelete]
+        public IActionResult Delete(int? id)
+        {
+            var obj = _unitOfWork.Product.GetFirstOrDefault(u => u.Id == id);
+            if (obj == null)
+            {
+                return Json(new { success = false, massage = "Error while deleting" });
+            }
+
+            var oldImagePath = Path.Combine(_hostEnvironment.WebRootPath, obj.ImageUrl.TrimStart('\\'));
+            if (System.IO.File.Exists(oldImagePath))
+            {
+                System.IO.File.Delete(oldImagePath);
+            }
+
+            _unitOfWork.Product.Remove(obj);
+            _unitOfWork.Save();
+            TempData["success"] = "Product deleted successfully";
+            return Json(new { success = true, message = "Delete Successfully" });
         }
         #endregion
     }

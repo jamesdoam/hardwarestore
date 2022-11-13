@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MZm/w1L7f7YNMUqMIgbaD8/NbbcwmiTIn8Jm+IIDwEY=",
+  "Hash": "vP11bPe6etNYvlOvX5hhdCtrb35G9kKfjxMh6LCulqQ=",
   "Source": "HardwareStoreWeb",
   "BasePath": "_content/HardwareStoreWeb",
   "Mode": "Default",
@@ -102,40 +102,6 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Thanh\\Documents\\dotnet\\HardwareStore\\HardwareStore\\wwwroot\\images\\products\\3258b73b-0810-4f07-8664-8d0d5e6c1cc0.jpg",
-      "SourceId": "HardwareStoreWeb",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Thanh\\Documents\\dotnet\\HardwareStore\\HardwareStore\\wwwroot\\",
-      "BasePath": "_content/HardwareStoreWeb",
-      "RelativePath": "images/products/3258b73b-0810-4f07-8664-8d0d5e6c1cc0.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\products\\3258b73b-0810-4f07-8664-8d0d5e6c1cc0.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Thanh\\Documents\\dotnet\\HardwareStore\\HardwareStore\\wwwroot\\images\\products\\3b41251a-176d-448c-994f-de142aeca74a.jpg",
-      "SourceId": "HardwareStoreWeb",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Thanh\\Documents\\dotnet\\HardwareStore\\HardwareStore\\wwwroot\\",
-      "BasePath": "_content/HardwareStoreWeb",
-      "RelativePath": "images/products/3b41251a-176d-448c-994f-de142aeca74a.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\products\\3b41251a-176d-448c-994f-de142aeca74a.jpg"
-    },
-    {
       "Identity": "C:\\Users\\Thanh\\Documents\\dotnet\\HardwareStore\\HardwareStore\\wwwroot\\images\\products\\4dc9e8d5-2b22-46e7-8ee4-c0bd75a8cc0e.jpg",
       "SourceId": "HardwareStoreWeb",
       "SourceType": "Discovered",
@@ -153,12 +119,12 @@
       "OriginalItemSpec": "wwwroot\\images\\products\\4dc9e8d5-2b22-46e7-8ee4-c0bd75a8cc0e.jpg"
     },
     {
-      "Identity": "C:\\Users\\Thanh\\Documents\\dotnet\\HardwareStore\\HardwareStore\\wwwroot\\images\\products\\52705b6c-4c6d-4d3d-a23d-59b800567e16.jpg",
+      "Identity": "C:\\Users\\Thanh\\Documents\\dotnet\\HardwareStore\\HardwareStore\\wwwroot\\images\\products\\6f2b081d-4a2a-4c35-a4e8-b8a2bdc2d9eb.jpg",
       "SourceId": "HardwareStoreWeb",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Thanh\\Documents\\dotnet\\HardwareStore\\HardwareStore\\wwwroot\\",
       "BasePath": "_content/HardwareStoreWeb",
-      "RelativePath": "images/products/52705b6c-4c6d-4d3d-a23d-59b800567e16.jpg",
+      "RelativePath": "images/products/6f2b081d-4a2a-4c35-a4e8-b8a2bdc2d9eb.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -167,15 +133,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\products\\52705b6c-4c6d-4d3d-a23d-59b800567e16.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\products\\6f2b081d-4a2a-4c35-a4e8-b8a2bdc2d9eb.jpg"
     },
     {
-      "Identity": "C:\\Users\\Thanh\\Documents\\dotnet\\HardwareStore\\HardwareStore\\wwwroot\\images\\products\\5bdb4cfe-0189-450b-a5f6-a5fffd4946e1.jpg",
+      "Identity": "C:\\Users\\Thanh\\Documents\\dotnet\\HardwareStore\\HardwareStore\\wwwroot\\images\\products\\c08f7d3d-6b0e-43e8-bd3f-35a1bb57eb39.jpg",
       "SourceId": "HardwareStoreWeb",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Thanh\\Documents\\dotnet\\HardwareStore\\HardwareStore\\wwwroot\\",
       "BasePath": "_content/HardwareStoreWeb",
-      "RelativePath": "images/products/5bdb4cfe-0189-450b-a5f6-a5fffd4946e1.jpg",
+      "RelativePath": "images/products/c08f7d3d-6b0e-43e8-bd3f-35a1bb57eb39.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -184,24 +150,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\products\\5bdb4cfe-0189-450b-a5f6-a5fffd4946e1.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\Thanh\\Documents\\dotnet\\HardwareStore\\HardwareStore\\wwwroot\\images\\products\\69ce8110-4cf4-4bd4-9369-c07ce4bccace.jpg",
-      "SourceId": "HardwareStoreWeb",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Thanh\\Documents\\dotnet\\HardwareStore\\HardwareStore\\wwwroot\\",
-      "BasePath": "_content/HardwareStoreWeb",
-      "RelativePath": "images/products/69ce8110-4cf4-4bd4-9369-c07ce4bccace.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\products\\69ce8110-4cf4-4bd4-9369-c07ce4bccace.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\products\\c08f7d3d-6b0e-43e8-bd3f-35a1bb57eb39.jpg"
     },
     {
       "Identity": "C:\\Users\\Thanh\\Documents\\dotnet\\HardwareStore\\HardwareStore\\wwwroot\\js\\product.js",
